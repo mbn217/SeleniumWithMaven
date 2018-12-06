@@ -16,9 +16,9 @@ import utilities.JavaUtils;
  * @Date 09/05/2018
  * @Purpose the purpose
  */
-public class amazonHomePage {
+public class AmazonHomePage {
 
-	private static Logger log = Logger.getLogger(amazonHomePage.class);
+	private static Logger log = Logger.getLogger(AmazonHomePage.class);
 	private WebDriver driver;
 	/**
 	 * Elements of the Home page
@@ -27,13 +27,17 @@ public class amazonHomePage {
 	public WebElement theElement; 
 	
 	
+	//+++++++++++++++++++++++++//
 	
+	public String verify_Amazon_LoginPage_Header_Label(){
+		return null;
+	}
 	
 	/**
 	 * PageObject Constructor
 	 * @throws Throwable 
 	 */
-	public amazonHomePage(WebDriver driver) throws Throwable {
+	public AmazonHomePage(WebDriver driver) throws Throwable {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
