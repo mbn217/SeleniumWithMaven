@@ -23,14 +23,26 @@ public class AmazonHomePage {
 	/**
 	 * Elements of the Home page
 	 */	
-	@FindBy(xpath = "//h2[contains(.,'theText')]")
-	public WebElement theElement; 
+	@FindBy(xpath = "//a[@class='nav-logo-link' and @aria-label='Amazon']")
+	public WebElement amazonPrimeIcon; 
 	
 	
 	//+++++++++++++++++++++++++//
 	
-	public String verify_Amazon_LoginPage_Header_Label(){
-		return null;
+	public boolean verify_Amazon_LoginPage_Header_Label(){
+		boolean isFound = true;
+		log.info("Verifying [amazon Prime] icon is displayed properly or NOT");
+		try {
+			boolean actualLabel = amazonPrimeIcon.isDisplayed();
+			log.info("The Element is FOUND");
+			return isFound;
+		} catch (NoSuchElementException e) {
+			log.error("The Element is not FOUND --> " + e.getMessage());
+			return isFound = false;
+		} catch (Exception e) {
+			log.error("Something went Wrong --> " + e.getMessage());
+			return isFound = false;
+		}
 	}
 	
 	/**
