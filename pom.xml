@@ -29,7 +29,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						<suiteXmlFile>${xml}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
